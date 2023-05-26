@@ -1,0 +1,20 @@
+{
+  "name": "com.wshunity.astarpathfinding",
+  "displayName": "Wsh Unity AStar Pathfinding",
+  "version": "0.0.1",
+  "unity": "2017.2",
+  "keywords": [
+    "AStar Pathfinding"
+  ],
+  "description": "This is a astar pathfinding system.\n\n依赖项：\n        Wsh Unity GridSystem:\n                 https://github.com/wsh-git/unity-custom-package-unityGridSystem.git",
+  "repository": {
+    "url": "https://github.com/wsh-git/unity-custom-package-unityAStarPathfinding.git",
+    "type": "git",
+    "revision": "9d824e3aeca574022eff896b9c751097dadd0619"
+  },
+  "author": {
+    "name": "wshunity",
+    "email": "",
+    "url": ""
+  }
+}

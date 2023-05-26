@@ -1,0 +1,16 @@
+{
+    "name": "Wsh.AStarPathfinding",
+    "rootNamespace": "",
+    "references": [
+        "GUID:82b316e43f1071144b5d2d05e7a4365a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
