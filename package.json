@@ -6,7 +6,7 @@
   "keywords": [
     "AStar Pathfinding"
   ],
-  "description": "This is a astar pathfinding system.\n\n依赖项：\n        Wsh Unity GridSystem:\n                 https://github.com/wsh-git/unity-custom-package-unityGridSystem.git",
+  "description": "This is a astar pathfinding system.\n\n\u4f9d\u8d56\u9879\uff1a\n        Wsh Unity GridSystem:\n                https://github.com/wsh-git/unity-custom-package-unityGridSystem.git",
   "repository": {
     "url": "https://github.com/wsh-git/unity-custom-package-unityAStarPathfinding.git",
     "type": "git",
