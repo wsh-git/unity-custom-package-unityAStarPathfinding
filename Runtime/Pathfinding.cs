@@ -22,7 +22,7 @@ namespace Wsh.AStar {
         public Pathfinding(int width, int height, Vector3 originPosition) : this(width, height, originPosition, true) { }
 
         public Pathfinding(int width, int height, Vector3 originPosition, bool canWalkDiagonal) {
-            m_grid = new Grid<PathNode>(width, height, CELL_WIDTH, originPosition, (Grid<PathNode> g, int x, int y) => new PathNode(g, x, y));
+            m_grid = new Grid<PathNode>(width, height, CELL_WIDTH, originPosition, false, (Grid<PathNode> g, int x, int y, float cellSize) => new PathNode(g, x, y));
             CacheNeighbourNodeList();
             m_canWalkDiagonal = canWalkDiagonal;
         }
@@ -99,11 +99,11 @@ namespace Wsh.AStar {
                 // Left
                 TryAddNeighbour(neighbourList, GetGridObject(currentNode.GetX() - 1, currentNode.GetY()));
                 // Left Down
-                if(currentNode.GetY() - 1 >= 0) {
+                if(m_canWalkDiagonal && currentNode.GetY() - 1 >= 0) {
                     TryAddNeighbour(neighbourList, GetGridObject(currentNode.GetX() - 1, currentNode.GetY() - 1));
                 }
                 // Left Up
-                if(currentNode.GetY() + 1 < m_grid.Height) {
+                if(m_canWalkDiagonal && currentNode.GetY() + 1 < m_grid.Height) {
                     TryAddNeighbour(neighbourList, GetGridObject(currentNode.GetX() - 1, currentNode.GetY() + 1));
                 }
             }
@@ -111,11 +111,11 @@ namespace Wsh.AStar {
                 // Right
                 TryAddNeighbour(neighbourList, GetGridObject(currentNode.GetX() + 1, currentNode.GetY()));
                 // Right Down
-                if(currentNode.GetY() - 1 >= 0) {
+                if(m_canWalkDiagonal && currentNode.GetY() - 1 >= 0) {
                     TryAddNeighbour(neighbourList, GetGridObject(currentNode.GetX() + 1, currentNode.GetY() - 1));
                 }
                 // Right Up
-                if(currentNode.GetY() + 1 < m_grid.Height) {
+                if(m_canWalkDiagonal && currentNode.GetY() + 1 < m_grid.Height) {
                     TryAddNeighbour(neighbourList, GetGridObject(currentNode.GetX() + 1, currentNode.GetY() + 1));
                 }
             }
